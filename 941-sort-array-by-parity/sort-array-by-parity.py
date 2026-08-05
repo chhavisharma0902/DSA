@@ -6,9 +6,6 @@ class Solution(object):
         """
         n = len(nums)
 
-        if n<=1:
-            return nums
-
         temp = 0
         start = 0
 
@@ -18,7 +15,4 @@ class Solution(object):
                 nums[start]=nums[i]
                 nums[i]=temp
                 start +=1
-                i+=1
-            else:
-                i+=1
         return nums
