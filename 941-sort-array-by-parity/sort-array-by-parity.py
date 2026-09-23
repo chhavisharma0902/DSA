@@ -10,11 +10,9 @@ class Solution(object):
         j = n - 1
         i = 0
         while(i<j):
-            if nums[i]%2!=0:
-                temp = nums[j]
-                nums[j]=nums[i]
-                nums[i]=temp
-                j -=1
+            if nums[i]%2==0:
+                i +=1
             else:
-                i+=1
+                nums[i],nums[j] = nums[j],nums[i]
+                j -=1
         return nums
