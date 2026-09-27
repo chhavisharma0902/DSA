@@ -4,10 +4,4 @@ class Solution(object):
         :type address: str
         :rtype: str
         """
-        ans = ''
-        for i in address:
-            if i != '.':
-                ans+=i
-            else:
-                ans+='[.]'
-        return ans
+        return address.replace('.','[.]')
