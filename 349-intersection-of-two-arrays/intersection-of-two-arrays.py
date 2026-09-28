@@ -7,15 +7,14 @@ class Solution(object):
         """
         nums1.sort()
         nums2.sort()
-        res = []
+        res = set()
         m = len(nums1)
         n = len(nums2) 
         i = 0
         j = 0
         while i<m and j<n:
             if(nums1[i]==nums2[j]):
-                if not res or res[-1] != nums1[i]:
-                    res.append(nums1[i])
+                res.add(nums1[i])
                 i+=1
                 j+=1
             elif(nums1[i]>nums2[j]):
@@ -23,4 +22,4 @@ class Solution(object):
             else:
                 i+=1
             
-        return res
+        return list(res)
