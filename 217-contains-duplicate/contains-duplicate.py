@@ -4,14 +4,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        nums.sort()
         n = len(nums)
-
-        if n == 1:
-            return False
+        seen = set()
         
-        for i in range(1,n):
-            if nums[i] == nums[i-1]:
+        for i in range(n):
+            if nums[i] in seen:
                 return True
+            seen.add(nums[i])
 
         return False
