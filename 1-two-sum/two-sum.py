@@ -5,13 +5,14 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        hashmap = {}
+        
+        h = {}
         for i,num in enumerate(nums):
             complement = target - num
-            if complement in hashmap:
-                return [hashmap[complement],i]
-            hashmap[num] = i
-        return None
+            if complement in h:
+                return [h[complement],i]
+            h[num] = i
+
 
 
         
