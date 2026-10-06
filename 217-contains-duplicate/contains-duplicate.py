@@ -7,9 +7,9 @@ class Solution(object):
         n = len(nums)
         seen = set()
         
-        for i in range(n):
-            if nums[i] in seen:
+        for i in nums:
+            if i in seen:
                 return True
-            seen.add(nums[i])
+            seen.add(i)
 
         return False
