@@ -5,11 +5,9 @@ class Solution(object):
         :rtype: bool
         """
         n = len(nums)
-        seen = set()
-        
-        for i in nums:
-            if i in seen:
+        hash_map = {}
+        for i in range(n):
+            hash_map[nums[i]] = hash_map.get(nums[i],0)+1
+            if (hash_map[nums[i]] > 1):
                 return True
-            seen.add(i)
-
         return False
